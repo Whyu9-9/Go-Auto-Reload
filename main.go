@@ -60,19 +60,37 @@ func getDataJSON() []string {
 	checkWater = status.Status.Water
 	checkWind = status.Status.Wind
 
-	if checkWater < 5 {
+	switch {
+	case checkWater < 5:
 		water = "Aman"
-	} else if checkWater >= 6 && checkWater <= 8 {
+	case checkWater >= 6 && checkWater < 8:
 		water = "Siaga"
-	} else {
+	case checkWater > 8:
 		water = "Bahaya"
 	}
 
-	if checkWind < 6 {
+	// if checkWater < 5 {
+	// 	water = "Aman"
+	// } else if checkWater >= 6 && checkWater <= 8 {
+	// 	water = "Siaga"
+	// } else {
+	// 	water = "Bahaya"
+	// }
+
+	// if checkWind < 6 {
+	// 	wind = "Aman"
+	// } else if checkWind >= 7 && checkWind <= 15 {
+	// 	wind = "Siaga"
+	// } else {
+	// 	wind = "Bahaya"
+	// }
+
+	switch {
+	case checkWind < 6:
 		wind = "Aman"
-	} else if checkWind >= 7 && checkWind <= 15 {
+	case checkWind >= 7 && checkWind <= 15:
 		wind = "Siaga"
-	} else {
+	case checkWind > 15:
 		wind = "Bahaya"
 	}
 
