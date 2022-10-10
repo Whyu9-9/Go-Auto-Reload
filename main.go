@@ -69,22 +69,6 @@ func getDataJSON() []string {
 		water = "Bahaya"
 	}
 
-	// if checkWater < 5 {
-	// 	water = "Aman"
-	// } else if checkWater >= 6 && checkWater <= 8 {
-	// 	water = "Siaga"
-	// } else {
-	// 	water = "Bahaya"
-	// }
-
-	// if checkWind < 6 {
-	// 	wind = "Aman"
-	// } else if checkWind >= 7 && checkWind <= 15 {
-	// 	wind = "Siaga"
-	// } else {
-	// 	wind = "Bahaya"
-	// }
-
 	switch {
 	case checkWind < 6:
 		wind = "Aman"
